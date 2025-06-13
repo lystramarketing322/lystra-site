@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro | Lystra Marketing</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .formulario {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #111;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+    }
+
+    .formulario h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #d4af37;
+      margin-bottom: 30px;
+    }
+
+    .campo {
+      margin-bottom: 25px;
+    }
+
+    .campo label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      background-color: #222;
+      color: #fff;
+      transition: border 0.3s ease;
+    }
+
+    .campo input:focus,
+    .campo textarea:focus,
+    .campo select:focus {
+      outline: none;
+      border: 1px solid #d4af37;
+    }
+
+    .btn {
+      background-color: #d4af37;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .btn::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(212, 175, 55, 0.4);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.5s ease, height 0.5s ease;
+      z-index: 0;
+    }
+
+    .btn:hover::after {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn span {
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPO -->
+  <header class="topo">
+    <div class="logo">LYSTRA</div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="../sobre.html">Sobre</a></li>
+        <li><a href="../servicos.html">Serviços</a></li>
+        <li><a href="../planos.html">Planos</a></li>
+        <li><a href="../contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- FORMULÁRIO -->
+  <section class="formulario">
+    <h1>Solicite seu Projeto</h1>
+    <form action="#" method="post">
+      <div class="campo">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required />
+      </div>
+      <div class="campo">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="campo">
+        <label for="telefone">WhatsApp</label>
+        <input type="tel" id="telefone" name="telefone" />
+      </div>
+      <div class="campo">
+        <label for="servico">Tipo de Serviço</label>
+        <select id="servico" name="servico" required>
+          <option value="">Selecione</option>
+          <option value="institucional">Site Institucional</option>
+          <option value="blog">Blog Corporativo</option>
+          <option value="loja">Loja Virtual</option>
+          <option value="avancado">Avançado com Integrações</option>
+          <option value="personalizado">Personalizado</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte mais sobre seu projeto..."></textarea>
+      </div>
+      <button type="submit" class="btn"><span>Enviar Solicitação</span></button>
+    </form>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Lystra Marketing. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
